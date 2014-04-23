@@ -1,0 +1,4 @@
+puts 'What\'s your favorite number?'
+fnum = gets.chomp.to_i
+newfnum = fnum + 1
+puts 'Maybe you should consider ' + newfnum.to_s + ' as your new favorite number?'
