@@ -1,0 +1,11 @@
+puts 'Hello there, and what\'s your first name?'
+fname = gets.chomp
+puts 'And you\'re middle name?'
+mname = gets.chomp
+puts 'And you\'re last name?'
+lname = gets.chomp
+name_length = lname.length + fname.length + mname.length
+puts 'Did you know there are ' + name_length.to_s + ' letters'
+puts 'in your name, ' + fname + ' ' + mname + ' ' + lname + '?' 
+
+puts 'What a lovely name, ' + fname + ' ' + mname + ' ' + lname + '.'
