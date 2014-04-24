@@ -1,0 +1,68 @@
+def new_roman_num num
+roman_num = '' 
+    digit = num/1000
+    if digit > 0
+      roman_num += ('M' * digit)
+      num = num - (1000 * digit)
+    end
+    digit = num/100
+    if digit == 4
+      roman_num += 'CD'
+      num -= 400
+      digit -= 4
+    elsif digit == 9 
+      roman_num += 'CM'
+      num -= 900
+      digit -= 900
+    end
+    if digit >= 5 
+      roman_num += 'D'
+      num = num - 500
+      digit -= 5
+    end
+    if digit > 0 
+      roman_num += ('C' * digit)
+      num = num - 100*digit
+    end
+    digit = num/10
+    if digit == 4
+      roman_num += 'XL'
+      num -= 40
+      digit -= 4
+    elsif digit == 9
+      roman_num += 'XC'
+      num -= 90
+      digit -= 9
+    end
+    if digit >= 5
+      roman_num += 'L'
+      num -= 50
+      digit -= 5
+    end
+    if digit > 0   
+      roman_num +=('X' * digit)
+      num -= 10 * digit
+    end
+    if num == 4
+      roman_num += 'IV'
+      num -= 4
+    elsif num == 9
+      roman_num += 'IX'
+      num -= 9
+    end
+    if num >= 5
+      roman_num += 'V'
+      num -= 5
+    end
+    if num > 0   
+      roman_num += ('I' * num)
+    end
+  return roman_num
+ end 
+             
+      
+puts 'enter an integer between 1 and 3,000:'
+num1 = gets.chomp.to_i
+
+print new_roman_num num1
+print "\n"
