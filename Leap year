@@ -1,0 +1,18 @@
+puts 'Please choose a starting year'
+s_year = gets.chomp
+puts 'Please choose an ending year'
+e_year = gets.chomp
+puts
+puts 'Leap years between ' + s_year + ' and ' + e_year + ':'
+puts
+while s_year.to_i <= e_year.to_i
+if s_year.to_i%4 == 0 && s_year.to_i%100 != 0
+        puts s_year.to_s + ' is a leap year'
+        s_year = s_year.to_i + 1
+    elsif s_year.to_i%100 == 0 && s_year.to_i%400 == 0
+        puts s_year.to_s + ' is a leap year'
+        s_year = s_year.to_i + 1
+    else
+        s_year = s_year.to_i + 1
+    end
+end
