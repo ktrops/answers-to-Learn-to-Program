@@ -1,0 +1,30 @@
+puts 'Type something to talk with Grandma'
+
+while true
+answer = gets.chomp  
+
+if answer == 'BYE' 
+    bye_count = bye_count + 1
+else
+    bye_count = 0
+    end
+    
+if bye_count >= 3
+    puts 'BYE, BYE, Sonny dear'
+    break
+end
+    
+if answer != answer.upcase
+    puts 'HUH? SPEAK UP, SONNY!'
+  
+else 
+    year = 0
+        while year < 1930
+            year = (rand(1950))
+        end
+       
+        puts 'No, not since ' + year.to_s
+
+               
+    end
+end
