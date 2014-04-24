@@ -1,0 +1,12 @@
+number = 99
+while true
+    puts number.to_s + ' bottles of beer on the wall ' + number.to_s + ' bottles of beer on the wall.'
+    number = number - 1
+    puts 'One fell off, then there were ' + number.to_s + ' bottles of beer on the wall.'
+    puts
+    
+    if number == 0 
+        break
+    end
+    
+end
